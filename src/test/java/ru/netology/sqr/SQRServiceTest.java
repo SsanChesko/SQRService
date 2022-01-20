@@ -8,8 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SQRServiceTest {
     @ParameterizedTest
-    @CsvSource(value = {"test, 400, 1000, 12", "test, 200, 300, 3", "test, 1, 99, 0", "test, 1, 100, 1"})
-    void shouldSum(String test, int minValue, int maxValue, int expected) {
+    @CsvSource(value = {"400, 1000, 12", "200, 300, 3", "1, 99, 0", "1, 100, 1"})
+    void shouldSum(int minValue, int maxValue, int expected) {
 
         SQRService service = new SQRService();
 
